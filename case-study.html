@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Multi-Unit Construction | Tholusal</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Essential Case Study CSS (as provided in the previous step) */
+        
+        /* Hero Section Layout */
+        .case-study-hero {
+            padding: 40px 20px;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 280px; /* Main content and sidebar */
+            grid-template-areas: 
+                "title sidebar"
+                "tagline sidebar"
+                "image image";
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-study-hero h1 {
+            font-size: 2.5em;
+            color: var(--blue);
+            grid-area: title;
+        }
+
+        .project-tagline {
+            font-size: 1.1em;
+            color: var(--gray-700);
+            grid-area: tagline;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+            grid-area: image;
+        }
+
+        /* Key Stats Sidebar */
+        .key-stats-sidebar {
+            background-color: #f0f4f7; 
+            padding: 20px;
+            border-radius: 8px;
+            grid-area: sidebar;
+            align-self: start;
+        }
+
+        .key-stats-sidebar h3 {
+            margin-top: 0;
+            color: var(--blue);
+        }
+
+        .stat-item {
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .stat-item strong {
+            font-weight: 700;
+        }
+
+        /* Content Sections */
+        .case-study-section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .case-study-section h2 {
+            color: var(--blue-700);
+            border-bottom: 2px solid var(--yellow);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .content-grid h3 {
+            color: var(--blue);
+            margin-top: 20px;
+        }
+
+        /* Proof Points (Image/Caption) */
+        .proof-points img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .proof-points .caption {
+            font-style: italic;
+            font-size: 0.9em;
+            color: var(--gray-600);
+        }
+
+        /* Project Gallery */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            height: 120px; /* Fixed height for consistency */
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .project-gallery img:hover {
+            transform: scale(1.03);
+            cursor: pointer; /* Indicate it might be clickable for a larger view */
+        }
+
+
+        /* Results Section */
+        .result-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .result-stats div {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--blue);
+        }
+
+        .client-quote {
+            background-color: var(--white);
+            border-left: 5px solid var(--yellow);
+            padding: 20px;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        .client-quote i {
+            font-size: 1.5em;
+            color: var(--yellow);
+            margin-right: 10px;
+        }
+
+        .client-quote cite {
+            display: block;
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--blue-700);
+        }
+
+        /* Final CTA */
+        .contact-cta {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: var(--blue);
+            color: white;
+        }
+
+        .contact-cta h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .case-study-hero {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "title"
+                    "tagline"
+                    "sidebar"
+                    "image";
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+      <div class="container nav">
+        <div class="brand">
+          <a href="index.html">
+            <img src="img/logo.jpg" alt="Tholusol Construction" height="60px">
+          </a>
+         
+        </div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#services-section">Services</a></li>
+            <li><a href="index.html#contact-section">Contact</a></li>
+            <li><a href="index.html#blog-section">Blog</a></li>
+          </ul>
+        </nav>
+        <label for="mobileMenuToggle" class="toggle menu-btn" aria-expanded="false" aria-controls="mobileMenu">
+          <input type="checkbox" id="mobileMenuToggle">
+          <div class="bars" id="bar1"></div>
+          <div class="bars" id="bar2"></div>
+          <div class="bars" id="bar3"></div>
+        </label>
+      </div>
+      <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Mobile menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+         <a href="index.html#services-section">Services</a>
+        <a href="index.html#contact-section">Contact</a>
+        <a href="index.html#blog-section">Blog</a>
+        <a class="cta" href="index.html#contact-section" style="background:var(--blue);margin:10px;border-radius:12px;text-align:center;font-weight:800;color:white;padding:12px 14px">Book a Free Consultation</a>
+      </div>
+    </header>
+    <main id="case-study-page">
+        
+        <div class="container case-study-hero">
+            <h1>Turnkey Construction of Multi-Unit Rental Complex</h1>
+            <p class="project-tagline">Comprehensive project management delivers income-generating assets on time and on budget in the Gauteng Region.</p>
+            
+            <aside class="key-stats-sidebar">
+                <h3>Project Snapshot</h3>
+                <div class="stat-item"><i class="fa fa-industry"></i> <strong>Client Sector:</strong> Property Investment</div>
+                <div class="stat-item"><i class="fa fa-map-marker"></i> <strong>Location:</strong> Gauteng Region</div>
+                <div class="stat-item"><i class="fa fa-calendar"></i> <strong>Service:</strong> Full Turnkey Construction</div>
+                <div class="stat-item"><i class="fa fa-clock-o"></i> <strong>Duration:</strong> 6 Months</div>
+                <div class="stat-item"><i class="fa fa-shield"></i> <strong>Compliance:</strong> OHS Compliant (Safety), B-BBEE Level 1</div>
+            </aside>
+
+            <img src="img/8.jpg" alt="Completed Two-Story Multi-Unit Rental Complex with exterior wooden balconies and paved courtyard." class="hero-image">
+        </div>
+
+        <section class="case-study-section">
+            <div class="container">
+                
+                <h2>1. The Client's Vision & Challenge</h2>
+                <p>The client, a property investor, required the swift and compliant development of a multi-unit complex designed for high-occupancy rental income. The critical challenge was achieving a balance between **cost-effective construction** and **high-quality, low-maintenance finishes** (essential for minimizing future operating costs) within a **tight, investor-mandated timeline** of six months to ensure rapid ROI.</p>
+
+                <h2>2. Tholusal’s Strategy & Execution</h2>
+                <div class="content-grid">
+                    <div>
+                        <h3>A. End-to-End Project Management</h3>
+                        <p>Tholusal provided complete <strong>design-to-handover construction services</strong>, overseeing every aspect from foundation pouring, structural erection, utility installations (plumbing and electrical), and full external and internal finishes. This single-point management approach eliminated delays and streamlined communication.</p>
+                        
+                        <h3>B. Engineered for Longevity and Safety</h3>
+                        <p>Given the high-use nature of rental property, our strategy included specialized material selection. We utilized durable <strong>waterproofing techniques</strong> and applied <strong>heavy-duty timber sealants</strong> to the external balconies and stairs to withstand weather and constant use, minimizing the client’s long-term maintenance burden. Site adherence to the **OHS Act** was rigorously enforced.</p>
+
+                        <h3>Project Progression Gallery</h3>
+                        <div class="project-gallery">
+                            <img src="img/2.jpg" alt="Foundation work in progress">
+                            <img src="img/6.jpg" alt="Structural frame being erected">
+                            <img src="img/4.jpg" alt="Exterior finishes being applied">
+                            <img src="img/5.jpg" alt="Courtyard landscaping nearing completion">
+                        </div>
+                    </div>
+                    
+                    <div class="proof-points">
+                        <img src="placeholder-process-1.jpg" alt="Construction team on site with safety gear performing a structural check.">
+                        <p class="caption">Dedicated site supervision ensured adherence to structural plans and safety protocols from start to finish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="case-study-section results-section">
+            <div class="container">
+                <h2>3. Outcomes: Value Delivered</h2>
+                <div class="result-stats">
+                    <div><i class="fa fa-check-circle"></i> <strong>100% On-Time Handover</strong></div>
+                    <div><i class="fa fa-thumbs-up"></i> Maximized Rental Appeal & Durability</div>
+                    <div><i class="fa fa-cubes"></i> <strong>Turnkey</strong> Completion Ready for Occupancy</div>
+                </div>
+
+                <blockquote class="client-quote">
+                    <i class="fa fa-quote-left"></i>
+                    <p>“Tholusal delivered the complex on schedule, allowing us to bring the units to market immediately. Their project management was outstanding, ensuring quality finishes and giving us complete peace of mind.”</p>
+                    <cite>— <strong>Property Investor, Gauteng Region</strong></cite>
+                </blockquote>
+            </div>
+        </section>
+        
+        <section class="contact-cta">
+            <div class="container">
+                <h3>Ready to Start Building Your Income-Generating Asset?</h3>
+                <a href="index.html#contact-section" class="btn primary btn-lg">Request a Consultation & Quote Today</a>
+            </div>
+        </section>
+
+    </main>
+      
+<footer>
+    <div class="container footer-grid foot">
+      <div>
+        <h3 class="foot-title">Tholusal Building & Maintenance</h3>
+        <p>Reliable and compliant construction and maintenance services for businesses and property owners across South Africa. Focused on quality, safety, and Level 1 B-BBEE excellence.</p>
+      </div>
+      <div>
+        <h4 class="foot-title">Quick Links</h4>
+        <p><a href="index.html#services-section">Services</a></p>
+        <p><a href="index.html#why-us-section">Why Choose Us</a></p>
+        <p><a href="index.html#our-work">Our Work</a></p> <p><a href="#blog-section">Insights</a></p>
+        <p><a href="index.html#contact-section">Get a Quote</a></p>
+      </div>
+      <div>
+        <h4 class="foot-title">Useful Links</h4>
+        <p><a href="https://www.cidb.org.za/" target="_blank" rel="noopener">CIDB (Construction Industry Dev. Board)</a></p>
+        <p><a href="https://www.labour.gov.za/DocumentCenter/Acts/Occupational%20Health%20and%20Safety/OHS%20Act%20full%20text.pdf" target="_blank" rel="noopener">OHS Act (Safety Compliance)</a></p>
+        <p><a href="./about-us.html">About Us</a></p> </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Tholusal Building & Maintenance. All rights reserved.</div>
+  </footer>
+  
+  <a href="https://wa.me/27634584278?text=Hello%20Tholusal,%20I%20saw%20your%20website%20and%20would%20like%20to%20enquire%20about%20a%20construction%20project%20or%20maintenance%20service." 
+     class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+ 
+    <script src="script.js"></script>
+    </body>
+</html>
+

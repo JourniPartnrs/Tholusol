@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Tholusal Building & Maintenance</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Specific CSS for About Page Replica */
+
+        /* General About Section Styling */
+        .about-replica-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--white); /* Ensure sections have a clear background */
+        }
+
+        .about-replica-section:nth-of-type(odd) {
+            background-color: #f8fafc; /* Light background for alternating sections */
+        }
+
+        /* Top Header for About Sections */
+        .about-section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--gray-200); /* Thin separator */
+            margin-bottom: 30px;
+        }
+
+        .about-section-header h2 {
+            font-size: 2.5em;
+            color: var(--blue-700); /* Darker blue for main headings */
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .about-section-header .section-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: var(--yellow); /* Light gray for the number */
+            margin-left: 20px;
+        }
+
+        /* --- Section 1: Who We Are --- */
+        .who-we-are-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            line-height: 1.6;
+        }
+
+        .who-we-are-content h3 {
+            font-size: 1.2em;
+            color: var(--yellow); /* "ABOUT US" text */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        /* Highlighted text in "Who We Are" */
+        .who-we-are-content p b {
+            font-weight: bold;
+            color: var(--blue); /* Highlighted text color */
+        }
+
+        /* --- Section 2: What Drives Us --- */
+        .what-drives-us-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            line-height: 1.6;
+        }
+        
+        .guiding-principles h3, .core-values h3 {
+            font-size: 1.2em;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .guiding-principles .principle-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .guiding-principles .principle-item i {
+            font-size: 2em;
+            color: var(--blue); /* Icon color */
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .guiding-principles .principle-item h4 {
+            font-size: 1.1em;
+            color: var(--blue);
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        /* Core Values List */
+        .core-values-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .core-values-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .core-values-list li i {
+            font-size: 2em;
+            color: var(--yellow); /* Icon color */
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .core-values-list li .value-text {
+            flex-grow: 1;
+        }
+
+        .core-values-list li .value-text h4 {
+            font-size: 1.1em;
+            color: var(--blue);
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .core-values-list li .value-text p {
+            margin-top: 0;
+            font-size: 0.95em;
+            color: var(--gray-700);
+        }
+
+        /* --- Section 3: Who Leads Us --- */
+        .who-leads-us-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .who-leads-us-intro h3 {
+            font-size: 1.8em;
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+
+        .who-leads-us-intro p {
+            font-size: 1.1em;
+            color: var(--gray-700);
+        }
+
+        .team-leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            align-items: start;
+        }
+
+        .team-member-replica {
+            text-align: center;
+        }
+
+        .team-member-replica img {
+            width: 180px; /* Slightly larger photos */
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--blue); /* Stronger border for visibility */
+            margin-bottom: 20px;
+        }
+
+        .team-member-replica h4 {
+            font-size: 1.5em;
+            color: var(--blue);
+            margin-bottom: 5px;
+        }
+
+        .team-member-replica .title {
+            font-weight: 600;
+            color: var(--yellow);
+            margin-bottom: 15px;
+            display: block; /* Ensure title is on its own line */
+        }
+
+        .team-member-replica p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: var(--gray-700);
+            text-align: left; /* Align text for better readability */
+        }
+
+        .team-member-replica .linkedin-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--blue-700);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .team-member-replica .linkedin-link:hover {
+            text-decoration: underline;
+        }
+
+        .team-support-text {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            color: var(--gray-600);
+            font-size: 1.1em;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .who-we-are-content,
+            .what-drives-us-content,
+            .team-leadership-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-section-header h2 {
+                font-size: 1.8em;
+            }
+            .about-section-header .section-number {
+                font-size: 2.5em;
+            }
+            .about-section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .about-section-header .section-number {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <a href="index.html">
+            <img src="img/logo.jpg" alt="Tholusol Construction" height="60px">
+          </a>
+         
+        </div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#services-section">Services</a></li>
+            <li><a href="index.html#contact-section">Contact</a></li>
+            <li><a href="index.html#blog-section">Blog</a></li>
+          </ul>
+        </nav>
+        <label for="mobileMenuToggle" class="toggle menu-btn" aria-expanded="false" aria-controls="mobileMenu">
+          <input type="checkbox" id="mobileMenuToggle">
+          <div class="bars" id="bar1"></div>
+          <div class="bars" id="bar2"></div>
+          <div class="bars" id="bar3"></div>
+        </label>
+      </div>
+      <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Mobile menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+         <a href="index.html#services-section">Services</a>
+        <a href="index.html#contact-section">Contact</a>
+        <a href="index.html#blog-section">Blog</a>
+        <a class="cta" href="index.html#contact-section" style="background:var(--blue);margin:10px;border-radius:12px;text-align:center;font-weight:800;color:white;padding:12px 14px">Book a Free Consultation</a>
+      </div>
+    </header>
+    <main id="about-page">
+        <section class="about-replica-section">
+            <div class="container">
+                <div class="about-section-header">
+                    <h2>Who We Are</h2>
+                    <span class="section-number">1</span>
+                </div>
+                <div class="who-we-are-content">
+                    <div>
+                        <h3>About Us</h3>
+                        <p>Tholusal is a proudly South African, <b>majority black women-owned (51%) Level 1 BBBEE Building & Maintenance company.</b> We provide high-quality, reliable, and cost-effective construction, renovations, plumbing, and general building maintenance solutions.</p>
+                        <p>Our foundation is built on meticulous planning of <b>safe building solutions</b> and a deep commitment to <b>high-quality workmanship</b>, ensuring every project, from routine maintenance to full-scale renovations, is executed to the highest quality standard. We are committed to delivering <b>exceptional quality, on-time project completion</b>, and <b>client satisfaction</b>.</p>
+                    </div>
+                    <div>
+                        <p>Run by professionals with extensive experience across a variety of industries, including real estate, construction, engineering, and governance amongst other skills, we bring a unique blend of <b>technical expertise, strategic oversight, and hands-on operational excellence.</b></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-replica-section">
+            <div class="container">
+                <div class="about-section-header">
+                    <h2>What Drives Us</h2>
+                    <span class="section-number">2</span>
+                </div>
+                <div class="what-drives-us-content">
+                    <div class="guiding-principles">
+                        <h3>Guiding Principles</h3>
+                        <div class="principle-item">
+                            <i class="fa fa-crosshairs" aria-hidden="true"></i>
+                            <div>
+                                <h4>Mission</h4>
+                                <p>We are committed to delivering high-quality construction, renovation, and building maintenance services that combine technical expertise, operational excellence, and client-centric solutions, ensuring projects are completed on time, within budget, and to the highest quality standards.</p>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <div>
+                                <h4>Vision</h4>
+                                <p>To be the trusted partner of choice for innovative and reliable building and maintenance solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="core-values">
+                        <h3>Core Value</h3>
+                        <ul class="core-values-list">
+                            <li>
+                                <i class="fa fa-balance-scale" aria-hidden="true"></i>
+                                <div class="value-text">
+                                    <h4>Integrity</h4>
+                                    <p>We conduct all business with transparency and accountability.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <div class="value-text">
+                                    <h4>Customer-Focused</h4>
+                                    <p>We are dedicated to building lasting client relationships, consistently delivering value-driven, responsive, and dependable service.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-shield" aria-hidden="true"></i>
+                                <div class="value-text">
+                                    <h4>Safety</h4>
+                                    <p>We prioritise the health and safety of our teams, clients, and communities.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-wrench" aria-hidden="true"></i>
+                                <div class="value-text">
+                                    <h4>Quality</h4>
+                                    <p>We strive for superior quality in every project, big or small.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                                <div class="value-text">
+                                    <h4>Innovation</h4>
+                                    <p>We embrace modern building techniques and sustainable practices.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-replica-section">
+            <div class="container">
+                <div class="about-section-header">
+                    <h2>Who Leads Us</h2>
+                    <span class="section-number">3</span>
+                </div>
+                <div class="who-leads-us-intro">
+                    <h3>Committed to Delivering High Quality Building & Maintenance Solutions</h3>
+                    <p>Tholusal is led by:</p>
+                </div>
+                
+                <div class="team-leadership-grid">
+                    <div class="team-member-replica">
+                        <img src="placeholder-meli.jpg" alt="Photo of Ms Lulu Mzili">
+                        <h4>Ms Lulu Mzili</h4>
+                        <p class="title">Co-Founder, Entrepreneur and Professional</p>
+                        <p>Ms Lulu Mzili brings vast executive experience in business management, having worked in both the private and public sector environments. Her experience spreads across different industries, including real estate, e-commerce, engineering, financial services, manufacturing, and aerospace & defence.</p>
+                        </div>
+                    
+                    <div class="team-member-replica">
+                        <img src="placeholder-mabuza.jpg" alt="Photo of Mr Solly Mabuza">
+                        <h4>Mr Solly Mabuza</h4>
+                        <p class="title">Co-Founder and Entrepreneur</p>
+                        <p>Mr Solly Mabuza started SG Construction a decade ago, providing general maintenance, renovations, paving, and other handyman-related services in residential, corporate, and industrial environments. His hands-on experience ensures operational excellence.</p>
+                        </div>
+                </div>
+                <p class="team-support-text">Each project is supported by a talented and experienced team of professionals and skilled craftsmen.</p>
+            </div>
+        </section>
+
+        </main>
+    <footer>
+    <div class="container footer-grid foot">
+      <div>
+        <h3 class="foot-title">Tholusal Building & Maintenance</h3>
+        <p>Reliable and compliant construction and maintenance services for businesses and property owners across South Africa. Focused on quality, safety, and Level 1 B-BBEE excellence.</p>
+      </div>
+      <div>
+        <h4 class="foot-title">Quick Links</h4>
+        <p><a href="index.html#services-section">Services</a></p>
+        <p><a href="index.html#why-us-section">Why Choose Us</a></p>
+        <p><a href="index.html#our-work">Our Work</a></p> <p><a href="#blog-section">Insights</a></p>
+        <p><a href="index.html#contact-section">Get a Quote</a></p>
+      </div>
+      <div>
+        <h4 class="foot-title">Useful Links</h4>
+        <p><a href="https://www.cidb.org.za/" target="_blank" rel="noopener">CIDB (Construction Industry Dev. Board)</a></p>
+        <p><a href="https://www.labour.gov.za/DocumentCenter/Acts/Occupational%20Health%20and%20Safety/OHS%20Act%20full%20text.pdf" target="_blank" rel="noopener">OHS Act (Safety Compliance)</a></p>
+        <p><a href="./about-us.html">About Us</a></p> </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Tholusal Building & Maintenance. All rights reserved.</div>
+  </footer>
+  
+  <a href="https://wa.me/27634584278?text=Hello%20Tholusal,%20I%20saw%20your%20website%20and%20would%20like%20to%20enquire%20about%20a%20construction%20project%20or%20maintenance%20service." 
+     class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+    <script src="script.js">
+        // Placeholder for any specific JS for this page, or if your main JS needs to run
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Any page-specific initialization
+        // });
+    </script>
+</body>
+</html>
+
