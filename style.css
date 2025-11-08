@@ -220,7 +220,7 @@ section{padding:64px 0}
 #testimonials  {
   width: 100%;
   height: auto; 
-  background-image: url('img/stars.jpg');
+  background-image: url('Img/stars.jpg');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -345,7 +345,7 @@ section{padding:64px 0}
 
 /* Footer */
 footer{
-  background-color:#1f499d;
+  background-color:#0b3a57;
   color:#cfe4ff;
 }
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:22px;padding:36px 10px}
@@ -363,14 +363,14 @@ footer{
   justify-content: center;
   width: 40px;
   height: 40px;
-  color: var(--yellow);
+  color: var(--blue);
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
 .whatsapp-button:hover{
   transform: scale(1.1);
-  color: var(--blue);
+  color: var(--yellow);
 }
 .whatsapp-button i{
   font-size: 2rem;
@@ -871,7 +871,7 @@ label{display:block;margin:0 0 6px;font-weight:600;color:var(--blue)}
 .about-replica-section:nth-of-type(2) {
     /* Using background-image with a gradient overlay */
     background-image: linear-gradient(rgba(13, 59, 102, 0.85), rgba(13, 59, 102, 0.85)), 
-                      url('img/renovation .jpg'); /* Replace with your image file path */
+                      url('Img/renovation .jpg'); /* Replace with your image file path */
     background-size: cover;
     background-position: center;
     color: white; /* Default text color for the section */
