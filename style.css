@@ -423,10 +423,16 @@ label{display:block;margin:0 0 6px;font-weight:600;color:var(--blue)}
 
   nav ul { display: flex; }
   .menu-btn, .mobile-menu { display: none !important; }
+
+  
+.project-card img {
+    width: 100%;
+    height:50%; /* Fixed height for consistency */  
 }
 
 /* Large screens: 3 columns */
 @media (min-width: 981px) {
+
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -435,10 +441,14 @@ label{display:block;margin:0 0 6px;font-weight:600;color:var(--blue)}
     grid-template-columns: 2fr 1fr 1fr; /* Adjusted for better footer layout */
   }
   
-  .stats .wrap{grid-template-columns:repeat(4,1fr)} /* Corrected for desktop view */
+  .stats .wrap {
+    grid-template-columns:repeat(4,1fr)
+  } /* Corrected for desktop view */
+
+ .stats .wrap{grid-template-columns:1fr 1fr} 
 }
 
-.stats .wrap{grid-template-columns:1fr 1fr}
+
 /* Small mobile */
 @media (max-width: 720px) {
   .footer-grid {
