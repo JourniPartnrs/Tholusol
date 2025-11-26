@@ -179,7 +179,10 @@ nav a.cta{background:var(--yellow);color:#111;border-radius:12px}
 .slide{position:relative;min-width:100%;height:calc(100vh - var(--header-height));max-height:760px}
 .slide img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55)}
 .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,59,102,0.15),rgba(13,59,102,0.65))}
-.slide-content{position:relative;z-index:2;height:100%;display:flex;align-items:center}
+
+/* FIX: Ensure CTA content stacks above the arrows (z-index: 10) */
+.slide-content{position:relative;z-index:10;height:100%;display:flex;align-items:center}
+
 .slide-card{max-width:850px;color:var(--white);padding:28px;border-radius:var(--radius);backdrop-filter: blur(3px);}
 .kicker{letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--yellow)}
 .headline{font-size:clamp(30px,7vw,50px);line-height:1.1;margin:8px 0 10px;font-weight:800}
@@ -290,14 +293,16 @@ section{padding:64px 0}
   border-color: var(--yellow);
 }
 
+/* FIX: Apply pointer-events to arrows container and buttons */
 .arrows {
-  position: absolute;
+  position: absolute ;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 12px;
   z-index: 5;
+  pointer-events: none; /* Let clicks pass through the container */
 }
 .arrow {
   width: 42px;
@@ -307,6 +312,7 @@ section{padding:64px 0}
   display: grid;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.10);
+  pointer-events: auto; /* Re-enable clicks on the buttons only */
 }
 /* Contact Section Reorder */
 .contact-grid{
@@ -415,8 +421,10 @@ label{display:block;margin:0 0 6px;font-weight:600;color:var(--blue)}
   }
 
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr; /* Adjusted for better footer layout */
   }
+  
+  .stats .wrap{grid-template-columns:repeat(4,1fr)} /* Corrected for desktop view */
 }
 
 .stats .wrap{grid-template-columns:1fr 1fr}

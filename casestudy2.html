@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Specialist Bathroom Renovation | Tholusol</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Essential Case Study CSS (assuming base CSS from previous steps is linked) */
+        
+        /* Hero Section Layout */
+        .case-study-hero {
+            padding: 40px 20px;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 280px; /* Main content and sidebar */
+            grid-template-areas: 
+                "title sidebar"
+                "tagline sidebar"
+                "image image";
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-study-hero h1 {
+            font-size: 2.5em;
+            color: var(--blue);
+            grid-area: title;
+        }
+
+        .project-tagline {
+            font-size: 1.1em;
+            color: var(--gray-700);
+            grid-area: tagline;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+            grid-area: image;
+        }
+
+        /* Key Stats Sidebar */
+        .key-stats-sidebar {
+            background-color: #f0f4f7; 
+            padding: 20px;
+            border-radius: 8px;
+            grid-area: sidebar;
+            align-self: start;
+        }
+
+        .key-stats-sidebar h3 {
+            margin-top: 0;
+            color: var(--blue);
+        }
+
+        .stat-item {
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .stat-item strong {
+            font-weight: 700;
+        }
+
+        /* Content Sections */
+        .case-study-section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .case-study-section h2 {
+            color: var(--blue-700);
+            border-bottom: 2px solid var(--yellow);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .content-grid h3 {
+            color: var(--blue);
+            margin-top: 20px;
+        }
+
+        /* Proof Points (Image/Caption) */
+        .proof-points img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .proof-points .caption {
+            font-style: italic;
+            font-size: 0.9em;
+            color: var(--gray-600);
+        }
+
+        /* Project Gallery */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            height: 120px; /* Fixed height for consistency */
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .project-gallery img:hover {
+            transform: scale(1.03);
+            cursor: pointer; /* Indicate it might be clickable for a larger view */
+        }
+
+
+        /* Results Section */
+        .result-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .result-stats div {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--blue);
+        }
+
+        .client-quote {
+            background-color: var(--white);
+            border-left: 5px solid var(--yellow);
+            padding: 20px;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        .client-quote i {
+            font-size: 1.5em;
+            color: var(--yellow);
+            margin-right: 10px;
+        }
+
+        .client-quote cite {
+            display: block;
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--blue-700);
+        }
+
+        /* Final CTA */
+        .contact-cta {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: var(--blue);
+            color: white;
+        }
+
+        .contact-cta h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .case-study-hero {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "title"
+                    "tagline"
+                    "sidebar"
+                    "image";
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+      <div class="container nav">
+        <div class="brand">
+          <a href="index.html">
+            <img src="Img/logo.jpg" alt="Tholusol Construction" height="60px">
+          </a>
+         
+        </div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#services-section">Services</a></li>
+            <li><a href="index.html#contact-section">Contact</a></li>
+            <li><a href="index.html#blog-section">Blog</a></li>
+          </ul>
+        </nav>
+        <label for="mobileMenuToggle" class="toggle menu-btn" aria-expanded="false" aria-controls="mobileMenu">
+          <input type="checkbox" id="mobileMenuToggle">
+          <div class="bars" id="bar1"></div>
+          <div class="bars" id="bar2"></div>
+          <div class="bars" id="bar3"></div>
+        </label>
+      </div>
+      <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Mobile menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+         <a href="index.html#services-section">Services</a>
+        <a href="index.html#contact-section">Contact</a>
+        <a href="index.html#blog-section">Blog</a>
+        <a class="cta" href="index.html#contact-section" style="background:var(--blue);margin:10px;border-radius:12px;text-align:center;font-weight:800;color:white;padding:12px 14px">Book a Free Consultation</a>
+      </div>
+    </header>
+    <main id="case-study-page">
+        
+        <div class="container case-study-hero">
+            <h1>Specialist Interior Renovation: Modern Bathroom Upgrade</h1>
+            <p class="project-tagline">Complete overhaul of an outdated bathroom, including new plumbing, tiling, waterproofing, and fixture installation for enhanced durability and style.</p>
+            
+            <aside class="key-stats-sidebar">
+                <h3>Project Snapshot</h3>
+                <div class="stat-item"><i class="fa fa-bath"></i> <strong>Client Sector:</strong> Residential Maintenance</div>
+                <div class="stat-item"><i class="fa fa-map-marker"></i> <strong>Location:</strong> Gauteng Region</div>
+                <div class="stat-item"><i class="fa fa-wrench"></i> <strong>Service:</strong> Full Bathroom Renovation & Plumbing Update</div>
+                <div class="stat-item"><i class="fa fa-clock-o"></i> <strong>Duration:</strong> 3 Weeks</div>
+                <div class="stat-item"><i class="fa fa-check-square-o"></i> <strong>Focus:</strong> Advanced Waterproofing & Compliance</div>
+            </aside>
+
+            <img src="Img/cs2.jpg" alt="Bathroom renovation showing new shower glass and toilet being installed." class="hero-image">
+        </div>
+
+        <section class="case-study-section">
+            <div class="container">
+                
+                <h2>1. The Challenge: Outdated and Failing Systems</h2>
+                <p>The client's primary bathroom was suffering from <b>outdated fixtures</b>, poor tiling, and an <b>aging plumbing system</b> prone to leaks. The goal was a complete <b>interior renovation</b> to modernise the space, improve functionality, and—critically—replace the internal pipework to ensure <b>long-term reliability</b> and prevent future water damage, all while maintaining the tight project timeframe.</p><br>
+
+                <h2>2. Tholusol’s Strategy & Execution</h2>
+                <div class="content-grid">
+                    <div>
+                        <h3>A. Comprehensive Plumbing Replacement</h3>
+                        <p>Our work began with the demolition of old tiling and plaster to expose the existing systems. We installed <b>new copper and PVC piping</b> for both supply and waste lines, embedding them securely within the wall structure.  This proactive replacement of aging infrastructure prevents costly emergency repairs down the line.</p>
+                        
+                        <h3>B. Expert Tiling and Waterproofing</h3>
+                        <p>Specialist services included applying a <b>multi-layer waterproofing membrane</b> to the shower area and floor before tiling commenced. We installed modern, durable ceramic tiles on the walls and floors, ensuring proper grading for drainage and a clean, contemporary finish.</p>
+
+                        <h3>Project Progression Gallery</h3>
+                        <div class="project-gallery">
+                            <img src="Img/cs1.jpg" alt="Demolition phase showing old tiles being removed">
+                            <img src="Img/cs12.jpg" alt="New PVC waste lines being laid during rough-in">
+                            <img src="Img/cs7.jpg" alt="Floor tiling in progress">
+                            <img src="Img/cs4.jpg" alt="Recessed lighting and cornice installation on ceiling">
+                        </div>
+                    </div>
+                    
+                    <div class="proof-points">
+                        <img src="Img/cs5.jpg" alt="Close-up of new copper water supply pipes against textured mortar wall.">
+                        <p class="caption">The strategic replacement of all copper and PVC pipework embedded in the walls ensures the longevity and reliability of the new bathroom.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="case-study-section results-section">
+            <div class="container">
+                <h2>3. Outcomes: Value Delivered</h2>
+                <div class="result-stats">
+                    <div><i class="fa fa-check-circle"></i> <b>Plumbing Reliability Guaranteed</b></div>
+                    <div><i class="fa fa-thumbs-up"></i> Modern, Easy-to-Maintain Finishes</div>
+                    <div><i class="fa fa-clock-o"></i> <b>Completed On Time (3 Weeks)</b></div>
+                </div>
+
+                <blockquote class="client-quote">
+                    <i class="fa fa-quote-left"></i>
+                    <p>“The quality of the plumbing and tiling work was exceptional. Tholusol delivered a beautiful, functional bathroom that we know will last for years, without any unexpected delays.”</p>
+                    <cite>— <b>Residential Client, Gauteng Region</b></cite>
+                </blockquote>
+            </div>
+        </section>
+        
+        <section class="contact-cta">
+            <div class="container">
+                <h3>Need Reliable Specialist Renovation or Maintenance for Your Property?</h3>
+                <a href="index.html#contact-section" class="btn primary btn-lg">Request a Consultation & Quote Today</a>
+            </div>
+        </section>
+
+    </main>
+      
+<footer>
+    <div class="container footer-grid foot">
+      <div>
+        <h3 class="foot-title">Tholusol Building & Maintenance</h3>
+        <p>Reliable and compliant construction and maintenance services for businesses and property owners across South Africa. Focused on quality, safety, and Level 1 B-BBEE excellence.</p>
+      </div>
+      <div>
+        <h4 class="foot-title">Quick Links</h4>
+        <p><a href="index.html#services-section">Services</a></p>
+        <p><a href="index.html#why-us-section">Why Choose Us</a></p>
+        <p><a href="index.html#our-work">Our Work</a></p> <p><a href="#blog-section">Insights</a></p>
+        <p><a href="index.html#contact-section">Get a Quote</a></p>
+      </div>
+      <div>
+        <h4 class="foot-title">Useful Links</h4>
+        <p><a href="https://www.cidb.org.za/" target="_blank" rel="noopener">CIDB (Construction Industry Dev. Board)</a></p>
+        <p><a href="https://www.labour.gov.za/DocumentCenter/Acts/Occupational%20Health%20and%20Safety/OHS%20Act%20full%20text.pdf" target="_blank" rel="noopener">OHS Act (Safety Compliance)</a></p>
+        <p><a href="about-us.html">About Us</a></p> </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Tholusol Building & Maintenance. All rights reserved.</div>
+  </footer>
+  
+  <a href="https://wa.me/27826942268?text=Hello%20Tholusol,%20I%20saw%20your%20website%20and%20would%20like%20to%20enquire%20about%20a%20construction%20project%20or%20maintenance%20service." 
+     class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+ 
+    <script src="script.js"></script>
+    </body>
+</html>

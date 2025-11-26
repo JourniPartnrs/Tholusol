@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Residential Exterior Renovation | Tholusol</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Essential Case Study CSS (as provided in the previous step) */
+        
+        /* Hero Section Layout */
+        .case-study-hero {
+            padding: 40px 20px;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 280px; /* Main content and sidebar */
+            grid-template-areas: 
+                "title sidebar"
+                "tagline sidebar"
+                "image image";
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-study-hero h1 {
+            font-size: 2.5em;
+            color: var(--blue);
+            grid-area: title;
+        }
+
+        .project-tagline {
+            font-size: 1.1em;
+            color: var(--gray-700);
+            grid-area: tagline;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+            grid-area: image;
+        }
+
+        /* Key Stats Sidebar */
+        .key-stats-sidebar {
+            background-color: #f0f4f7; 
+            padding: 20px;
+            border-radius: 8px;
+            grid-area: sidebar;
+            align-self: start;
+        }
+
+        .key-stats-sidebar h3 {
+            margin-top: 0;
+            color: var(--blue);
+        }
+
+        .stat-item {
+            font-size: 1em;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .stat-item strong {
+            font-weight: 700;
+        }
+
+        /* Content Sections */
+        .case-study-section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .case-study-section h2 {
+            color: var(--blue-700);
+            border-bottom: 2px solid var(--yellow);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .content-grid h3 {
+            color: var(--blue);
+            margin-top: 20px;
+        }
+
+        /* Proof Points (Image/Caption) */
+        .proof-points img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .proof-points .caption {
+            font-style: italic;
+            font-size: 0.9em;
+            color: var(--gray-600);
+        }
+
+        /* Project Gallery */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            height: 120px; /* Fixed height for consistency */
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .project-gallery img:hover {
+            transform: scale(1.03);
+            cursor: pointer; /* Indicate it might be clickable for a larger view */
+        }
+
+
+        /* Results Section */
+        .result-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .result-stats div {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--blue);
+        }
+
+        .client-quote {
+            background-color: var(--white);
+            border-left: 5px solid var(--yellow);
+            padding: 20px;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        .client-quote i {
+            font-size: 1.5em;
+            color: var(--yellow);
+            margin-right: 10px;
+        }
+
+        .client-quote cite {
+            display: block;
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--blue-700);
+        }
+
+        /* Final CTA */
+        .contact-cta {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: var(--blue);
+            color: white;
+        }
+
+        .contact-cta h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .case-study-hero {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    "title"
+                    "tagline"
+                    "sidebar"
+                    "image";
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+      <div class="container nav">
+        <div class="brand">
+          <a href="index.html">
+            <img src="Img/logo.jpg" alt="Tholusol Construction" height="60px">
+          </a>
+         
+        </div>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#services-section">Services</a></li>
+            <li><a href="index.html#contact-section">Contact</a></li>
+            <li><a href="index.html#blog-section">Blog</a></li>
+          </ul>
+        </nav>
+        <label for="mobileMenuToggle" class="toggle menu-btn" aria-expanded="false" aria-controls="mobileMenu">
+          <input type="checkbox" id="mobileMenuToggle">
+          <div class="bars" id="bar1"></div>
+          <div class="bars" id="bar2"></div>
+          <div class="bars" id="bar3"></div>
+        </label>
+      </div>
+      <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Mobile menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+         <a href="index.html#services-section">Services</a>
+        <a href="index.html#contact-section">Contact</a>
+        <a href="index.html#blog-section">Blog</a>
+        <a class="cta" href="index.html#contact-section" style="background:var(--blue);margin:10px;border-radius:12px;text-align:center;font-weight:800;color:white;padding:12px 14px">Book a Free Consultation</a>
+      </div>
+    </header>
+    <main id="case-study-page">
+        
+        <div class="container case-study-hero">
+            <h1>Residential Exterior Remediation & Restoration</h1>
+            <p class="project-tagline">Comprehensive crack repair and full exterior repaint to restore the structural integrity and aesthetic value of a private residential unit.</p>
+            
+            <aside class="key-stats-sidebar">
+                <h3>Project Snapshot</h3>
+                <div class="stat-item"><i class="fa fa-home"></i> <strong>Client Sector:</strong> Private Residential</div>
+                <div class="stat-item"><i class="fa fa-map-marker"></i> <strong>Location:</strong> Gauteng Region</div>
+                <div class="stat-item"><i class="fa fa-paint-brush"></i> <strong>Service:</strong> Structural Crack Repair & Painting</div>
+                <div class="stat-item"><i class="fa fa-clock-o"></i> <strong>Duration:</strong> 4 Weeks</div>
+                <div class="stat-item"><i class="fa fa-shield"></i> <strong>Compliance:</strong> Use of approved SABS structural repair compounds.</div>
+            </aside>
+
+            <img src="Img/10.jpg" alt="Residential exterior with extensive structural cracks visible." class="hero-image">
+        </div>
+
+        <section class="case-study-section">
+            <div class="container">
+                
+                <h2>1. The Challenge: Structural Damage & Aesthetic Degradation</h2>
+                <p>The unit was suffering from <b>extensive structural cracks</b> across the façade, a common issue stemming from foundation movement or water ingress over time. These cracks posed both a structural concern and significantly degraded the property's curb appeal and value. The client required a solution that would not just cosmetically cover the damage, but <b>structurally remedy</b> the cracks and provide a durable, long-lasting exterior finish.</p>
+
+                <h2>2. Tholusol’s Strategy & Execution</h2>
+                <div class="content-grid">
+                    <div>
+                        <h3>A. Precision Crack Remediation</h3>
+                        <p>Our work began with a full assessment to identify active structural points. We then implemented a<b> two-stage crack filling process</b>: opening up the cracks, cleaning, applying a bonding agent, and filling them with specialized <b>flexible polymer-modified fillers</b> to accommodate future minimal movement without cracking the top layer.</p>
+                        
+                        <h3>B. Preparation and Surface Sealing</h3>
+                        <p>After structural repair, the entire surface was scraped, washed, and primed. A <b>quality masonry primer</b> was applied to ensure maximum adhesion for the new top coat and seal the surface against future moisture damage. This meticulous preparation is key to a long-lasting paint finish.</p>
+
+                        <h3>Project Progression Gallery</h3>
+                        <div class="project-gallery">
+                            <img src="Img/1.jpg" alt="Close-up of cracks before repair">
+                            <img src="Img/11.jpg" alt="Technicians on ladders repairing cracks">
+                            <img src="Img/12.jpg" alt="Final completed exterior from the front">
+                            <img src="Img/9.jpg" alt="Final completed exterior from the side">
+                        </div>
+                    </div>
+                    
+                    <div class="proof-points">
+                        <img src="Img/11.jpg" alt="Workers repairing the exterior walls">
+                        <p class="caption">Specialized attention was given to sealing all crack areas before final painting to ensure long-term stability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="case-study-section results-section">
+            <div class="container">
+                <h2>3. Outcomes: Value Delivered</h2>
+                <div class="result-stats">
+                    <div><i class="fa fa-check-circle"></i> <b>Structural Integrity Restored</b></div>
+                    <div><i class="fa fa-thumbs-up"></i> High-Quality, Durable Paint Finish</div>
+                    <div><i class="fa fa-clock-o"></i> <b>Completed in 2 Weeks</b></div>
+                </div>
+
+                <blockquote class="client-quote">
+                    <i class="fa fa-quote-left"></i>
+                    <p>“The house looks brand new! Tholusol’s team was professional, addressing the cracks thoroughly, not just painting over them. We're very pleased with the speed and the quality of the exterior restoration.”</p>
+                    <cite>— <b>Residential Client, Gauteng Region</b></cite>
+                </blockquote>
+            </div>
+        </section>
+        
+        <section class="contact-cta">
+            <div class="container">
+                <h3>Is Your Home Ready for a Structural or Aesthetic Refresh?</h3>
+                <a href="index.html#contact-section" class="btn primary btn-lg">Request a Consultation & Quote Today</a>
+            </div>
+        </section>
+
+    </main>
+      
+<footer>
+    <div class="container footer-grid foot">
+      <div>
+        <h3 class="foot-title">Tholusol Building & Maintenance</h3>
+        <p>Reliable and compliant construction and maintenance services for businesses and property owners across South Africa. Focused on quality, safety, and Level 1 B-BBEE excellence.</p>
+      </div>
+      <div>
+        <h4 class="foot-title">Quick Links</h4>
+        <p><a href="index.html#services-section">Services</a></p>
+        <p><a href="index.html#why-us-section">Why Choose Us</a></p>
+        <p><a href="index.html#our-work">Our Work</a></p> <p><a href="#blog-section">Insights</a></p>
+        <p><a href="index.html#contact-section">Get a Quote</a></p>
+      </div>
+      <div>
+        <h4 class="foot-title">Useful Links</h4>
+        <p><a href="https://www.cidb.org.za/" target="_blank" rel="noopener">CIDB (Construction Industry Dev. Board)</a></p>
+        <p><a href="https://www.labour.gov.za/DocumentCenter/Acts/Occupational%20Health%20and%20Safety/OHS%20Act%20full%20text.pdf" target="_blank" rel="noopener">OHS Act (Safety Compliance)</a></p>
+        <p><a href="about-us.html">About Us</a></p> </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Tholusol Building & Maintenance. All rights reserved.</div>
+  </footer>
+  
+  <a href="https://wa.me/27826942268?text=Hello%20Tholusol,%20I%20saw%20your%20website%20and%20would%20like%20to%20enquire%20about%20a%20construction%20project%20or%20maintenance%20service." 
+     class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+ 
+    <script src="script.js"></script>
+    </body>
+</html>
