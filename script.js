@@ -158,26 +158,6 @@ function animateCounters() {
   });
 }
 
-// Single-page navigation logic
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const targetId = this.getAttribute('href');
-    const targetSection = document.querySelector(targetId);
-
-    if (targetSection) {
-      e.preventDefault();
-      const allSections = document.querySelectorAll('.page-section');
-      allSections.forEach(section => section.classList.remove('active'));
-      targetSection.classList.add('active');
-
-      window.scrollTo({
-        top: targetSection.offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
-
 
 // Handle initial page load
 window.addEventListener('load', () => {
