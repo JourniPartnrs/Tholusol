@@ -932,4 +932,9 @@ label{display:block;margin:0 0 6px;font-weight:600;color:var(--blue)}
   .stats .wrap {
     gap: 36px; /* Increase gap between stats */
   }
+
+.project-card img {
+    width: 100%;
+    height:50%; /* Fixed height for consistency */  
+}
 }
