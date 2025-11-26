@@ -45,7 +45,7 @@ img{
 
 /* NEW: Full-width inner content wrapper for large sections */
 .inner-content-max {
-    max-width: 1400px; /* Wider max for large screens */
+    max-width: 2000px; /* Wider max for large screens */
     margin: 0 auto;
     padding: 0 20px; /* Essential padding for mobile and desktop sides */
 }
