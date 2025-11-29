@@ -1,0 +1,11 @@
+# Apply the following rules to all web crawlers
+User-agent: *
+
+# Disallow access to the server-side processing file to prevent it from being indexed
+Disallow: /process_form.php
+
+# Allow crawling of all other pages/directories
+Allow: /
+
+# Specify the location of the XML Sitemap
+Sitemap: https://tholusol.co.za/sitemap.xml
